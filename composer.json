@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "DnsStore\\": "src/"
+    }
+  },
+  "require": {
+    "aws/aws-sdk-php": "^3.54",
+    "vlucas/phpdotenv": "^2.4"
+  }
+}
