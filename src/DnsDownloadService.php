@@ -30,7 +30,7 @@ class DnsDownloadService
 
 
         print "\nFetching:\n";
-        for ($i = 1; $i < $metadata['blockCount']; $i++) {
+        for ($i = 1; $i <= $metadata['blockCount']; $i++) {
             print ".";
             if ($i % 50 === 0) {
                 print " ($i/{$metadata['blockCount']})\n";
