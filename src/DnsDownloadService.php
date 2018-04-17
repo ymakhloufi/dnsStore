@@ -38,7 +38,7 @@ class DnsDownloadService
 
             // allow for up to 10 retries if a record cannot be found!
             $record = dns_get_record($this->getIdentifierByIterator($i), DNS_TXT);
-            for ($retry = 0; $retry < 10 and !isset($record[0]); $retry++) {
+            for ($retry = 0; $retry < getenv("DNS_DOWNLOAD_ROBUSTNESS") and !isset($record[0]); $retry++) {
                 sleep(1);
                 $record = dns_get_record($this->getIdentifierByIterator($i), DNS_TXT);
             }
